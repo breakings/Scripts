@@ -27,6 +27,8 @@ jobs:
           node Task/Youth_Read.js
       - name: Remove artifacts
         uses: c-hive/gha-remove-artifacts@v1.2.0
+        with:
+          age: '1 month'
         env:
           YOUTH_READ: ${{ secrets.YOUTH_READ_2 }}
           PUSH_KEY: ${{ secrets.PUSH_KEY }}
