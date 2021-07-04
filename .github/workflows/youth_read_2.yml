@@ -18,13 +18,13 @@ jobs:
       - name: Use Node.js 12.x
         uses: actions/setup-node@v1
         with:
-          node-version: 10.x
+          node-version: 12.x
       - name: npm install
         run: |
           npm install
-      #- name: '运行 【中青看点自动阅读第二脚本】'
-        #run: |
-          #node Task/Youth_Read.js
+      - name: '运行 【中青看点自动阅读第二脚本】'
+        run: |
+          node Task/Youth_Read.js
       - name: Remove artifacts
         uses: c-hive/gha-remove-artifacts@v1.2.0
         env:
