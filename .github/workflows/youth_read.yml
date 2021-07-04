@@ -25,8 +25,11 @@ jobs:
       - name: '运行 【中青看点自动阅读】'
         run: |
           node Task/Youth_Read.js
-      - name: Remove artifacts
-        uses: c-hive/gha-remove-artifacts@v1.2.0
+      - name: Delete workflow runs
+        uses: GitRML/delete-workflow-runs@main
+         with:
+         retain_days: 30
+         keep_minimum_runs: 10
         env:
           YOUTH_READ: ${{ secrets.YOUTH_READ }}
           PUSH_KEY: ${{ secrets.PUSH_KEY }}
