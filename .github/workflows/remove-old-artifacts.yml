@@ -20,3 +20,8 @@ jobs:
         # Optional inputs
         # skip-tags: true
         # skip-recent: 5
+    - name: Delete workflow runs
+      uses: GitRML/delete-workflow-runs@main
+      with:
+        retain_days: 30
+        keep_minimum_runs: 10
