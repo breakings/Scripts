@@ -27,9 +27,9 @@ jobs:
           node Task/Youth_Read.js
       - name: Delete workflow runs
         uses: GitRML/delete-workflow-runs@main
-         with:
-         retain_days: 30
-         keep_minimum_runs: 10
+        with:
+          retain_days: 30
+          keep_minimum_runs: 10
         env:
           YOUTH_READ: ${{ secrets.YOUTH_READ }}
           PUSH_KEY: ${{ secrets.PUSH_KEY }}
